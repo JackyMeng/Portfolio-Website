@@ -1,0 +1,1230 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+html {
+  background-color: #f4f4f4;
+  height: 100%;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  html {
+    background-color: white;
+  }
+}
+
+body.homepage {
+  height: 200%;
+}
+
+div.portfolio {
+  width: 100%;
+  height: 50%;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  div.portfolio {
+    height: auto;
+    background-color: #fff !important;
+  }
+}
+
+div.about {
+  width: 100%;
+  height: 50%;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  div.about {
+    height: auto;
+    background-color: #fff !important;
+  }
+}
+
+h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #444444;
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  h1 {
+    font-size: 26px;
+  }
+}
+
+h2 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: white;
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  h2 {
+    font-size: 22px;
+  }
+}
+
+p.content {
+  max-width: 1000px;
+  width: 80%;
+  line-height: 1.6;
+  font-family: 'Nunito', sans-serif;
+  font-size: 26px;
+  margin: 50px auto;
+  color: #919191;
+  text-align: center;
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  p.content {
+    width: 90%;
+    text-align: left;
+    margin: 50px auto 50px auto;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 500px) {
+  p.link {
+    text-align: center;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 800px) {
+  img.imgshow {
+    display: none;
+  }
+}
+
+img.imghide {
+  display: none;
+}
+@media (min-width: 0px) and (max-width: 800px) {
+  img.imghide {
+    display: block;
+  }
+}
+
+p.important {
+  background: #D7D7D7;
+  padding: 40px;
+  color: white;
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  p.important {
+    padding: 50px 5% 50px 5%;
+  }
+}
+
+.aboutLink {
+  float: right;
+  width: 50px;
+  margin-top: 40px;
+  margin-right: 100px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 25px;
+  text-decoration: none;
+  color: #9e9e9e;
+}
+.aboutLink:hover {
+  color: #D5D5D5;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+nav {
+  width: 100%;
+  height: 100px;
+  top: 0;
+  position: fixed;
+  z-index: 70;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+@media (min-width: 600px) and (max-width: 999px) {
+  nav {
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  nav {
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+}
+nav .logosvg {
+  height: 80px;
+  width: auto;
+  z-index: 20;
+  margin-left: 50%;
+  margin-top: 40px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+@media (min-width: 600px) and (max-width: 999px) {
+  nav .logosvg {
+    height: 80px;
+    margin-left: 40px;
+    transform: translateX(0%);
+    margin-top: 10px;
+  }
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  nav .logosvg {
+    height: 60px;
+    margin-left: 30px;
+    transform: translateX(0%);
+    margin-top: 10px;
+  }
+}
+nav .hamburger {
+  float: right;
+  margin-top: 50px;
+  margin-right: 100px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  z-index: 70;
+}
+@media (min-width: 600px) and (max-width: 999px) {
+  nav .hamburger {
+    margin-top: 25px;
+    margin-right: 40px;
+  }
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  nav .hamburger {
+    margin-top: 15px;
+    margin-right: 30px;
+  }
+}
+
+.navScroll {
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.navScroll .logosvg {
+  margin-left: 40px;
+  height: 60px;
+  margin-top: 10px;
+  transform: translateX(0%);
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  .navScroll .logosvg {
+    margin-left: 20px;
+  }
+}
+.navScroll .hamburger {
+  margin-top: 10px;
+  margin-right: 40px;
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  .navScroll .hamburger {
+    margin-right: 20px;
+  }
+}
+
+div.menu {
+  height: 800px;
+  width: 400px;
+  float: right;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 50;
+  background: white;
+  display: none;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 90%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 90%);
+}
+@media (min-width: 500px) and (max-width: 999px) {
+  div.menu {
+    width: 60%;
+    height: 100%;
+  }
+}
+@media (min-width: 0) and (max-width: 499px) {
+  div.menu {
+    width: 100%;
+    height: 100%;
+  }
+}
+div.menu ul {
+  margin-top: 100px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  margin-left: 140px;
+}
+@media (min-width: 0) and (max-width: 499px) {
+  div.menu ul {
+    font-size: 16px;
+  }
+}
+div.menu ul .category {
+  position: relative;
+  font-size: 24px;
+  left: -15px;
+  padding: 10px;
+  cursor: pointer;
+  color: #727272;
+}
+@media (min-width: 0) and (max-width: 499px) {
+  div.menu ul .category {
+    padding: 5px;
+  }
+}
+div.menu ul li {
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  color: #9E9E9E;
+  padding: 5px;
+}
+@media (min-width: 0) and (max-width: 499px) {
+  div.menu ul li {
+    padding: 2px;
+  }
+}
+div.menu ul li:hover {
+  color: #5B5B5B;
+}
+
+div.works {
+  width: 1000px;
+  height: 500px;
+  margin: 100px auto;
+  overflow: hidden;
+  filter: drop-shadow(0px 0px 5px #b5b5b5);
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  div.works {
+    width: 100%;
+    height: 1950px;
+    margin: 0px auto 0px auto;
+  }
+}
+@media (min-width: 0px) and (max-width: 499px) {
+  div.works {
+    height: 1050px;
+  }
+}
+div.works a {
+  text-decoration: none;
+}
+div.works div {
+  opacity: 0.75;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  div.works div {
+    opacity: 1;
+  }
+}
+div.works div:hover {
+  opacity: 1.0;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+}
+div.works .work1 {
+  -webkit-clip-path: polygon(7.6% 68.4%, 1.4% 29.4%, 98% 43.7%);
+  clip-path: polygon(7.6% 68.4%, 1.4% 29.4%, 98% 43.7%);
+  height: 400px;
+  width: 400px;
+  box-shadow: 0px 0px 34px -5px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  position: relative;
+  top: -95px;
+  left: 30px;
+  background: url(../img/pj1.png);
+  background-size: 100% auto;
+  background-position: 0px 100px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  div.works .work1 {
+    width: 100%;
+    height: 200px;
+    -webkit-clip-path: polygon(0% 0%, 100% 25%, 100% 75%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 25%, 100% 75%, 0% 100%);
+    top: 0;
+    left: 0;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  div.works .work1 {
+    height: 150px;
+  }
+}
+@media (min-width: 700px) and (max-width: 999px) {
+  div.works .work1 {
+    height: 250px;
+  }
+}
+div.works .work2 {
+  -webkit-clip-path: polygon(13.1% 38%, 54.4% 84.1%, 84.6% 18.5%);
+  clip-path: polygon(13.1% 38%, 54.4% 84.1%, 84.6% 18.5%);
+  height: 400px;
+  width: 400px;
+  box-shadow: 0px 0px 34px -5px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  position: relative;
+  top: 40px;
+  left: -385px;
+  background: url(../img/pj2.png);
+  background-size: 70% auto;
+  background-position: 60px 40px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  div.works .work2 {
+    background: url(../img/pj2_m.png);
+    width: 100%;
+    height: 200px;
+    -webkit-clip-path: polygon(100% 0%, 0% 25%, 0% 75%, 100% 100%);
+    clip-path: polygon(100% 0%, 0% 25%, 0% 75%, 100% 100%);
+    top: -55px;
+    left: 0;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  div.works .work2 {
+    height: 150px;
+    top: -40px;
+  }
+}
+@media (min-width: 700px) and (max-width: 999px) {
+  div.works .work2 {
+    height: 250px;
+    top: -65px;
+  }
+}
+div.works .work3 {
+  -webkit-clip-path: polygon(38.6% 19.7%, 25.4% 80.3%, 79.9% 65.7%);
+  clip-path: polygon(38.6% 19.7%, 25.4% 80.3%, 79.9% 65.7%);
+  height: 400px;
+  width: 400px;
+  box-shadow: 0px 0px 34px -5px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  position: relative;
+  top: -280px;
+  left: -95px;
+  background: url(../img/pj3.png);
+  background-size: 75% auto;
+  background-position: 54px 50px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  div.works .work3 {
+    background: url(../img/pj3_m.png);
+    width: 100%;
+    height: 200px;
+    -webkit-clip-path: polygon(0% 0%, 100% 25%, 100% 75%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 25%, 100% 75%, 0% 100%);
+    top: -110px;
+    left: 0;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  div.works .work3 {
+    height: 150px;
+    top: -80px;
+  }
+}
+@media (min-width: 700px) and (max-width: 999px) {
+  div.works .work3 {
+    height: 250px;
+    top: -130px;
+  }
+}
+div.works .work4 {
+  -webkit-clip-path: polygon(49.6% 5%, 19.4% 70.6%, 76.8% 90.7%);
+  clip-path: polygon(49.6% 5%, 19.4% 70.6%, 76.8% 90.7%);
+  height: 400px;
+  width: 400px;
+  box-shadow: 0px 0px 34px -5px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  position: relative;
+  top: -303px;
+  left: -230px;
+  background: url(../img/pj4.png);
+  background-size: 90% auto;
+  background-position: 30px 20px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  div.works .work4 {
+    background: url(../img/pj4_m.png);
+    width: 100%;
+    height: 200px;
+    -webkit-clip-path: polygon(100% 0%, 0% 25%, 0% 75%, 100% 100%);
+    clip-path: polygon(100% 0%, 0% 25%, 0% 75%, 100% 100%);
+    top: -165px;
+    left: 0;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  div.works .work4 {
+    height: 150px;
+    top: -120px;
+  }
+}
+@media (min-width: 700px) and (max-width: 999px) {
+  div.works .work4 {
+    height: 250px;
+    top: -195px;
+  }
+}
+div.works .work5 {
+  -webkit-clip-path: polygon(14.7% 4.1%, 92.2% 33.8%, 41.8% 89.8%);
+  clip-path: polygon(14.7% 4.1%, 92.2% 33.8%, 41.8% 89.8%);
+  height: 400px;
+  width: 400px;
+  box-shadow: 0px 0px 34px -5px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  position: relative;
+  top: -705px;
+  left: 330px;
+  background: url(../img/pj5.png);
+  background-size: 100% auto;
+  background-position: 10px 0px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  div.works .work5 {
+    background: url(../img/pj5_m.png);
+    width: 100%;
+    height: 200px;
+    -webkit-clip-path: polygon(0% 0%, 100% 25%, 100% 75%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 25%, 100% 75%, 0% 100%);
+    top: -220px;
+    left: 0;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  div.works .work5 {
+    height: 150px;
+    top: -160px;
+  }
+}
+@media (min-width: 700px) and (max-width: 999px) {
+  div.works .work5 {
+    height: 250px;
+    top: -260px;
+  }
+}
+div.works .work6 {
+  -webkit-clip-path: polygon(12.1% 37.2%, 55.7% 23.7%, 89.5% 67%);
+  clip-path: polygon(12.1% 37.2%, 55.7% 23.7%, 89.5% 67%);
+  height: 400px;
+  width: 400px;
+  box-shadow: 0px 0px 34px -5px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  position: relative;
+  top: -850px;
+  left: -55px;
+  background: url(../img/pj6.png);
+  background-size: 100% auto;
+  background-position: 0px 40px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  div.works .work6 {
+    background: url(../img/pj6_m.png);
+    width: 100%;
+    height: 200px;
+    -webkit-clip-path: polygon(100% 0%, 0% 25%, 0% 75%, 100% 100%);
+    clip-path: polygon(100% 0%, 0% 25%, 0% 75%, 100% 100%);
+    top: -275px;
+    left: 0;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  div.works .work6 {
+    height: 150px;
+    top: -200px;
+  }
+}
+@media (min-width: 700px) and (max-width: 999px) {
+  div.works .work6 {
+    height: 250px;
+    top: -325px;
+  }
+}
+div.works .work7 {
+  -webkit-clip-path: polygon(12.1% 35.5%, 89.9% 24.1%, 43.9% 75.9%);
+  clip-path: polygon(12.1% 35.5%, 89.9% 24.1%, 43.9% 75.9%);
+  height: 400px;
+  width: 400px;
+  box-shadow: 0px 0px 34px -5px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  position: relative;
+  top: -1300px;
+  left: 543px;
+  background: url(../img/pj7.png);
+  background-size: 100% auto;
+  background-position: -15px 80px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  div.works .work7 {
+    background: url(../img/pj7_m.png);
+    width: 100%;
+    height: 200px;
+    -webkit-clip-path: polygon(0% 0%, 100% 25%, 100% 75%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 25%, 100% 75%, 0% 100%);
+    top: -330px;
+    left: 0;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  div.works .work7 {
+    height: 150px;
+    top: -240px;
+  }
+}
+@media (min-width: 700px) and (max-width: 999px) {
+  div.works .work7 {
+    height: 250px;
+    top: -390px;
+  }
+}
+div.works .work8 {
+  -webkit-clip-path: polygon(10.6% 88.3%, 89.4% 88.4%, 83.1% 7.3%);
+  clip-path: polygon(10.6% 88.3%, 89.4% 88.4%, 83.1% 7.3%);
+  height: 400px;
+  width: 400px;
+  box-shadow: 0px 0px 34px -5px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  position: relative;
+  top: -1100px;
+  left: 70px;
+  background: url(../img/pj8.png);
+  background-size: 100% auto;
+  background-position: -10px 20px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  div.works .work8 {
+    background: url(../img/pj8_m.png);
+    width: 100%;
+    height: 200px;
+    -webkit-clip-path: polygon(100% 0%, 0% 25%, 0% 75%, 100% 100%);
+    clip-path: polygon(100% 0%, 0% 25%, 0% 75%, 100% 100%);
+    top: -385px;
+    left: 0;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  div.works .work8 {
+    height: 150px;
+    top: -280px;
+  }
+}
+@media (min-width: 700px) and (max-width: 999px) {
+  div.works .work8 {
+    height: 250px;
+    top: -455px;
+  }
+}
+div.works .work9 {
+  -webkit-clip-path: polygon(50.6% 6.5%, 79.2% 61.5%, 40.4% 93.5%, 35% 23.3%);
+  clip-path: polygon(50.6% 6.5%, 79.2% 61.5%, 40.4% 93.5%, 35% 23.3%);
+  height: 400px;
+  width: 400px;
+  box-shadow: 0px 0px 34px -5px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  position: relative;
+  top: -1580px;
+  left: 682px;
+  background: url(../img/pj9.png);
+  background-size: 60% auto;
+  background-position: 100px 0px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  div.works .work9 {
+    background: url(../img/pj9_m.jpg);
+    width: 100%;
+    height: 200px;
+    -webkit-clip-path: polygon(0% 0%, 100% 25%, 100% 75%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 25%, 100% 75%, 0% 100%);
+    top: -440px;
+    left: 0;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  div.works .work9 {
+    height: 150px;
+    top: -320px;
+  }
+}
+@media (min-width: 700px) and (max-width: 999px) {
+  div.works .work9 {
+    height: 250px;
+    top: -520px;
+  }
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fade {
+  opacity: 0.2 !important;
+}
+
+.p-overview {
+  width: 850px;
+  height: 740px;
+  margin: 100px auto 20px auto;
+  /*filter: drop-shadow(0px 1px 29px 80px rgba(0,0,0,0.9));*/
+  /*filter: drop-shadow(0px 1px 29px rgba(0,0,0,0.5));*/
+  filter: drop-shadow(0px 0px 16px #b5b5b5);
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  .p-overview {
+    width: 100%;
+    height: 400px;
+  }
+}
+.p-overview div.p-img1 {
+  background: url(../img/pj1_h.jpg) no-repeat center center;
+  background-size: 100% auto;
+  background-position: 0px 127px;
+  -webkit-clip-path: polygon(0% 15.8%, 100% 45.9%, 25.1% 82.6%);
+  clip-path: polygon(0% 15.8%, 100% 45.9%, 25.1% 82.6%);
+  height: 800px;
+  width: 800px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  .p-overview div.p-img1 {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    clip-path: none;
+    -webkit-clip-path: none;
+    /*-webkit-clip-path: polygon(0% 0%, 100% 0%,100% 75%, 0% 100%);*/
+    /*clip-path: polygon(0% 0%, 100% 0%,100% 75%, 0% 100%);*/
+    background-position: center center;
+  }
+}
+.p-overview div.p-img2 {
+  background: url(../img/pj2_h.png) no-repeat center center;
+  background-size: 100% auto;
+  background-position: 0px 60px;
+  -webkit-clip-path: polygon(0% 15.8%, 100% 45.9%, 25.1% 82.6%);
+  clip-path: polygon(0% 15.8%, 100% 45.9%, 25.1% 82.6%);
+  height: 800px;
+  width: 800px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  .p-overview div.p-img2 {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    clip-path: none;
+    -webkit-clip-path: none;
+    background-position: center center;
+  }
+}
+.p-overview div.p-img3 {
+  background: url(../img/pj3_h.png) no-repeat center center;
+  background-size: 110% auto;
+  background-position: -70px -30px;
+  -webkit-clip-path: polygon(0% 15.8%, 100% 45.9%, 25.1% 82.6%);
+  clip-path: polygon(0% 15.8%, 100% 45.9%, 25.1% 82.6%);
+  height: 800px;
+  width: 800px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  .p-overview div.p-img3 {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    clip-path: none;
+    -webkit-clip-path: none;
+    background-position: center center;
+  }
+}
+.p-overview div.p-img4 {
+  background: url(../img/pj4_h.png) no-repeat center center;
+  background-size: 100% auto;
+  background-position: 0px 40px;
+  -webkit-clip-path: polygon(0% 15.8%, 100% 45.9%, 25.1% 82.6%);
+  clip-path: polygon(0% 15.8%, 100% 45.9%, 25.1% 82.6%);
+  height: 800px;
+  width: 800px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  .p-overview div.p-img4 {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    clip-path: none;
+    -webkit-clip-path: none;
+    background-position: center center;
+  }
+}
+.p-overview div.p-img5 {
+  background: url(../img/pj5_h.png) no-repeat center center;
+  background-size: 100% auto;
+  background-position: 0px 105px;
+  -webkit-clip-path: polygon(0% 15.8%, 100% 45.9%, 25.1% 82.6%);
+  clip-path: polygon(0% 15.8%, 100% 45.9%, 25.1% 82.6%);
+  height: 800px;
+  width: 800px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  .p-overview div.p-img5 {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    clip-path: none;
+    -webkit-clip-path: none;
+    background-position: center center;
+  }
+}
+.p-overview div.p-img6 {
+  background: url(../img/pj6_h.svg) no-repeat center center;
+  background-size: 130% auto;
+  background-position: -190px 20px;
+  -webkit-clip-path: polygon(0% 15.8%, 100% 45.9%, 25.1% 82.6%);
+  clip-path: polygon(0% 15.8%, 100% 45.9%, 25.1% 82.6%);
+  height: 800px;
+  width: 800px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  .p-overview div.p-img6 {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    clip-path: none;
+    -webkit-clip-path: none;
+    background-position: center center;
+  }
+}
+.p-overview div.p-img7 {
+  background: url(../img/pj7_h.png) no-repeat center center;
+  background-size: 130% auto;
+  background-position: -125px 90px;
+  -webkit-clip-path: polygon(0% 15.8%, 100% 45.9%, 25.1% 82.6%);
+  clip-path: polygon(0% 15.8%, 100% 45.9%, 25.1% 82.6%);
+  height: 800px;
+  width: 800px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  .p-overview div.p-img7 {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    clip-path: none;
+    -webkit-clip-path: none;
+    background-position: center center;
+  }
+}
+.p-overview div.p-img8 {
+  background: url(../img/pj8_h.png) no-repeat center center;
+  background-size: 105% auto;
+  background-position: -30px 110px;
+  -webkit-clip-path: polygon(0% 15.8%, 100% 45.9%, 25.1% 82.6%);
+  clip-path: polygon(0% 15.8%, 100% 45.9%, 25.1% 82.6%);
+  height: 800px;
+  width: 800px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  .p-overview div.p-img8 {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    clip-path: none;
+    -webkit-clip-path: none;
+    background-position: center center;
+  }
+}
+.p-overview div.p-img9 {
+  background: url(../img/pj9_1.jpg) no-repeat center center;
+  background-size: 105% auto;
+  background-position: 0px 125px;
+  -webkit-clip-path: polygon(0% 15.8%, 100% 45.9%, 25.1% 82.6%);
+  clip-path: polygon(0% 15.8%, 100% 45.9%, 25.1% 82.6%);
+  height: 800px;
+  width: 800px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  .p-overview div.p-img9 {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    clip-path: none;
+    -webkit-clip-path: none;
+    background-position: center center;
+  }
+}
+
+.backButton {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background-color: transparent;
+  top: 110px;
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 80% 0%);
+  clip-path: polygon(0% 0%, 0% 100%, 80% 0%);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+.backButton:hover {
+  background-color: #5D5D5D;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+.backButton:hover .backButtonImg {
+  fill-opacity: 1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+.backButton .backButtonImg {
+  width: 40px;
+  position: relative;
+  top: 50px;
+  left: 30px;
+  fill-opacity: 0.1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  .backButton .backButtonImg {
+    display: none;
+  }
+}
+
+div.p-name {
+  background-color: #76BE5F;
+  -webkit-clip-path: polygon(93.7% 0%, 100% 49.3%, 0% 46%);
+  clip-path: polygon(93.7% 0%, 100% 49.3%, 0% 46%);
+  height: 500px;
+  width: 500px;
+  position: relative;
+  top: -434px;
+  left: 331px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  div.p-name {
+    -webkit-clip-path: polygon(100% 0%, 0% 75%, 100% 75%);
+    clip-path: polygon(100% 0%, 0% 75%, 100% 75%);
+    width: 100%;
+    height: 200px;
+    top: -150px;
+    left: 0;
+  }
+}
+div.p-name h1 {
+  padding-top: 125px;
+  padding-left: 280px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  margin: 0 0;
+  text-align: left;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  div.p-name h1 {
+    padding-top: 75px;
+    padding-left: 58%;
+  }
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  div.p-name h1 {
+    font-size: 24px;
+  }
+}
+div.p-name h2 {
+  padding-left: 280px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  div.p-name h2 {
+    padding-left: 58%;
+  }
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  div.p-name h2 {
+    font-size: 20px;
+  }
+}
+
+div.p-name1 {
+  background-color: #76BE5F;
+}
+
+div.p-name2 {
+  background-color: #4D636C;
+}
+
+div.p-name3 {
+  background-color: #AEB69F;
+}
+
+div.p-name4 {
+  background-color: #0F0F0F;
+}
+
+div.p-name5 {
+  background-color: #E3BB6B;
+}
+
+div.p-name6 {
+  background-color: #009671;
+}
+
+div.p-name7 {
+  background-color: #D1D3C1;
+}
+
+div.p-name8 {
+  background-color: #0F0F0F;
+}
+
+div.p-name9 {
+  background-color: #128EEF;
+}
+
+.contentImg {
+  width: 80%;
+  max-width: 1000px;
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  .contentImg {
+    width: 90%;
+  }
+}
+
+.contentLongImg {
+  width: 40%;
+  max-width: 1000px;
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  .contentLongImg {
+    width: 90%;
+  }
+}
+
+.iframe {
+  height: 600px;
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  .iframe {
+    height: 240px;
+  }
+}
+
+p.left {
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+a > p:hover {
+  color: #1B1B1B;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+a.imagelink {
+  width: 80%;
+  max-width: 1000px;
+  display: inline-block;
+}
+
+footer {
+  height: 80px;
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+}
+footer p {
+  font-family: 'Nunito', sans-serif;
+  margin: 0 auto;
+  color: #D1D1D1;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.about {
+  overflow: hidden;
+}
+.about .aboutContent {
+  width: 780px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  /*border: 1px solid black;*/
+  filter: drop-shadow(0px 0px 5px #b5b5b5);
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  .about .aboutContent {
+    filter: none;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    text-align: center;
+  }
+}
+.about .aboutContent .aboutImg {
+  -webkit-clip-path: polygon(0% 9.6%, 75.4% 100%, 97.5% 0%);
+  clip-path: polygon(0% 9.6%, 75.4% 100%, 97.5% 0%);
+  width: 300px;
+  height: 300px;
+  position: relative;
+  left: 50px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  .about .aboutContent .aboutImg {
+    clip-path: none;
+    -webkit-clip-path: none;
+    width: 80%;
+    height: auto;
+    left: 0;
+  }
+}
+.about .aboutContent .aboutTexts {
+  -webkit-clip-path: polygon(0% 100%, 21.7% 0%, 97.1% 24%);
+  clip-path: polygon(0% 100%, 21.7% 0%, 97.1% 24%);
+  width: 600px;
+  height: 600px;
+  background: #FFFFFF;
+  position: relative;
+  top: -300px;
+  left: 230px;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  .about .aboutContent .aboutTexts {
+    display: none;
+  }
+}
+.about .aboutContent p {
+  display: none;
+}
+@media (min-width: 0px) and (max-width: 999px) {
+  .about .aboutContent p {
+    display: block;
+    text-align: left;
+    font-size: 22px;
+  }
+}
+.about footer {
+  margin-top: 300px;
+}
+
+.preload {
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.preload .logoAnimation {
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  /*transform: translate(-50%,-50%);*/
+  animation: rotate 2s infinite ease-in-out;
+  -webkit-animation: rotate 2s infinite ease-in-out;
+  transform-origin: center;
+}
+
+@keyframes rotate {
+  0% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(180deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(180deg);
+  }
+  33% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  66% {
+    transform: perspective(120px) rotateX(0deg) rotateY(360deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(360deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(180deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(180deg);
+  }
+}
