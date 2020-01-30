@@ -76,7 +76,7 @@ $(document).ready(function() {
 $(document).ready(function() {
 	// var load_screen = document.getElementById("load_screen");
 	// document.body.removeChild(load_screen);
-	$('.preload').delay(1100).fadeOut('slow')
+	$('.preload').delay(100).fadeOut('slow')
 });
 
    $( ".hamburger" ).click(function() {
