@@ -252,7 +252,8 @@ div.works{
   	height: 500px;
   	margin: 100px auto;
   	overflow:hidden;
-  	filter: drop-shadow(0px 0px 5px #b5b5b5);
+  	/*filter: drop-shadow(0px 0px 5px #b5b5b5);*/
+  	filter: drop-shadow(4px 4px 5px #b5b5b5);
 
     @include breakpoint(0px 999px){
       	width: 100%;
@@ -267,15 +268,20 @@ div.works{
   		text-decoration: none;
   	}
 	div{
-		opacity:0.75;
+		opacity:1;
 		transition: all 0.2s;
     	-webkit-transition: all 0.2s;
+    	/*box-shadow: 4px 4px 5px #434343;*/
     	@include breakpoint(0px 999px){
 			opacity:1;
 
     	}
 		&:hover{
-			opacity:1.0;
+			opacity:0.4;
+			/*filter: blur(2px);*/
+			/*filter: saturate(120%);*/
+  			/*filter: drop-shadow(0px 0px 5px #b5b5b5);*/
+			/*filter:drop-shadow(5px 10px #888888);*/
 			transition: all 0.2s;
     		-webkit-transition: all 0.2s;
 		}
@@ -290,9 +296,12 @@ div.works{
 	  position: relative;
 	  top:-95px;
 	  left: 30px;
-	  background: url(../img/pj1.png);
-      background-size: 100% auto;
-      background-position: 0px 100px;
+	  background: url(../img/pj2.jpg);
+      /*background-size: 100% auto;*/
+      /*background-position: 0px 100px;*/
+      background-size: 130% auto;
+	  background-position: 420px 30px;
+
       @include breakpoint(0px 999px){
 			width: 100%;
 			height: 200px;
@@ -322,9 +331,9 @@ div.works{
 	  position: relative;
 	  top:40px;
 	  left: -385px;
-	  background: url(../img/pj2.png);
-      background-size: 70% auto;
-      background-position: 60px 40px;
+	  background: url(../img/pj1.jpg);
+      background-size: 100% auto;
+      background-position: 0px 10px;
       @include breakpoint(0px 999px){
 	  		background: url(../img/pj2_m.png);
 			width: 100%;
@@ -1001,7 +1010,9 @@ footer{
  		position: relative;
  		
   		/*border: 1px solid black;*/
-		filter: drop-shadow(0px 0px 5px #b5b5b5);
+		/*filter: drop-shadow(0px 0px 5px #b5b5b5);*/
+  		filter: drop-shadow(4px 4px 5px #b5b5b5);
+
 		@include breakpoint(0px 999px){
       			filter:none;
       			width: 100%;
