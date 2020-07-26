@@ -16,7 +16,7 @@
         <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.min.css" />
         <link rel="stylesheet" type="text/css" href="css/hamburgers.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css">
-
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,500&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/jquery-ui.min.js"></script>
@@ -30,14 +30,62 @@
         </div>
         <nav>
             <a href="index.html"><img class="logosvg" src="img/logo_name.svg" alt="logo"></a>
-            
-            <div class="hamburger hamburger--emphatic-r" type="button">
+            <!-- Old Navigation -->
+            <!-- <div class="hamburger hamburger--emphatic-r" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </div> -->
+            <!-- New Navigation -->
+            <div onclick="toggleNav()" class="hamburger hamburger--emphatic-r" type="button">
               <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
               </span>
             </div>
         </nav>
-        <div class="menu">
+        <div class="menu" id="menu">
+            <ul>
+                <a href="index.html#portfolio"><li class="category" id="uiux">UI/UX Project</li></a>
+                <a href="project5.html" id="project5">
+                    <li>Simply Breakfast</li>
+                </a>
+                <a href="roadtothefuture.html" id="project2">
+                    <li>Road to the Future</li>
+                </a>
+                <a href="rade.html" id="project1">
+                    <li>RADE</li>
+                </a>
+                <a href="project3.html" id="project3">
+                    <li>Dragon Slayer</li>
+                </a>
+                <a href="index.html#portfolio"><li class="category"id="web">Web Development</li></a>
+                <a href="project6.html" id="project6">
+                    <li>Bunny Time</li>
+                </a>
+                <a href="project7.html" id="project7">
+                    <li>Lombard Street</li>
+                </a>
+                <a href="index.html#portfolio"><li class="category"id="type">Type Design</li></a>
+                <a href="project8.html" id="project8">
+                    <li>Venom</li>
+                </a>
+                <a href="index.html#portfolio"><li class="category"id="photography">Photography</li></a>
+                <a href="project9.html" id="project9">
+                    <li>ChinaGuide</li>
+                </a>
+                <a href="index.html#portfolio">
+                <li class="category"id="visual">Visual Design</li>
+                </a>
+                <a href="project4.html" id="project4">
+                    <li>Miscellaneous Works</li>
+                </a>
+                <a href="#about">
+                    <li class="category" style="cursor: pointer;">About</li>
+                </a>
+            </ul>
+        </div>
+        <!-- Old Navigation -->
+        <!-- <div class="menu">
             <ul>
                 <a href="index.html#portfolio"><li class="category" id="uiux">UI/UX Project</li></a>
                 <a href="project5.html" id="project5">
@@ -77,14 +125,9 @@
                     <li class="category" style="cursor: pointer;">About</li>
                 </a>
             </ul>
-        </div>
+        </div> -->
         <div id="fullpage">
         <div class="portfolio section">
-                
-                
-                
-               
-            
             <div class="works">
                 <a href="rade.html">
                      <div class="work1"></div>
@@ -121,11 +164,6 @@
                 <img class="aboutTexts" src="img/aboutTexts.svg" alt="">
                 <p class="content">My name is Jacky Meng. I graduated from the Web Design & New Media major at Academy of Art University in May 2018. I am proficient in UI/UX design and web development languages like HTML, CSS, and JavaScript. I believe with my skill and creativity, I could bring a lot of brilliant ideas to your company.</p>
             </div>
-<!--             <div class="aboutMobile">
-                <img class="aboutImg" src="img/photo.jpg" alt="">
-
-            </div> -->
-
         </div>
         </div>
         <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>

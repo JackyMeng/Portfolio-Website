@@ -47,9 +47,9 @@ $(document).ready(function() {
 		//Design
 		controlArrows: true,
 		verticalCentered: true,
-		sectionsColor : ['#f4f4f4', '#f4f4f4'],
+		sectionsColor : ['#fff', '#f7f7f7'],
 		paddingTop: '3em',
-		paddingBottom: '10px',
+		// paddingBottom: '10px',
 		fixedElements: '#header, .footer',
 		responsiveWidth: 1000,
 		responsiveHeight: 850,
@@ -79,53 +79,67 @@ $(document).ready(function() {
 	$('.preload').delay(100).fadeOut('slow')
 });
 
-   $( ".hamburger" ).click(function() {
-	  $('.menu').toggle("slide", { direction: "right" }, 500,'easeInOutQuart');
-	  $(".hamburger").toggleClass("is-active");
+//    $( ".hamburger" ).click(function() {
+// 	  $('.menu').toggle("slide", { direction: "right" }, 500,'easeInOutQuart');
+// 	  $(".hamburger").toggleClass("is-active");
 
-});
+// });
 
 	$( "#project1" ).hover(function() {
 	  $( ".work2,.work3,.work4,.work5,.work6,.work7,.work8,.work9").toggleClass("fade");
+	  $( ".work1").toggleClass("show");
 	});
 	$( "#project2" ).hover(function() {
 	  $( ".work1,.work3,.work4,.work5,.work6,.work7,.work8,.work9").toggleClass("fade");
+	  $( ".work2").toggleClass("show");
 	});
 	$( "#project3" ).hover(function() {
 	  $( ".work2,.work1,.work4,.work5,.work6,.work7,.work8,.work9").toggleClass("fade");
+	  $( ".work3").toggleClass("show");
 	});
 	$( "#project4" ).hover(function() {
 	  $( ".work1,.work3,.work2,.work5,.work6,.work7,.work8,.work9").toggleClass("fade");
+	  $( ".work4").toggleClass("show");
 	});
 	$( "#project5" ).hover(function() {
 	  $( ".work2,.work1,.work4,.work3,.work6,.work7,.work8,.work9").toggleClass("fade");
+	  $( ".work5").toggleClass("show");
 	});
 	$( "#project6" ).hover(function() {
 	  $( ".work1,.work3,.work2,.work5,.work4,.work7,.work8,.work9").toggleClass("fade");
+	  $( ".work6").toggleClass("show");
 	});
 	$( "#project7" ).hover(function() {
 	  $( ".work1,.work3,.work2,.work5,.work6,.work4,.work8,.work9").toggleClass("fade");
+	  $( ".work7").toggleClass("show");
 	});
 	$( "#project8" ).hover(function() {
 	  $( ".work2,.work1,.work4,.work3,.work6,.work7,.work5,.work9").toggleClass("fade");
+	  $( ".work8").toggleClass("show");
 	});
 	$( "#project9" ).hover(function() {
 	  $( ".work1,.work3,.work2,.work5,.work4,.work7,.work8,.work6").toggleClass("fade");
+	  $( ".work9").toggleClass("show");
 	});
 	$( "#uiux" ).hover(function() {
 	  $( ".work7,.work6,.work4,.work8,.work9").toggleClass("fade");
+	  $( ".work1,.work2,.work3,.work5").toggleClass("show");
 	});
 	$( "#web" ).hover(function() {
 	  $( ".work1,.work2,.work3,.work4,.work5,.work8,.work9").toggleClass("fade");
+	  $( ".work6,.work7").toggleClass("show");
 	});
 	$( "#type" ).hover(function() {
 	  $( ".work1,.work3,.work2,.work5,.work4,.work7,.work9,.work6").toggleClass("fade");
+	  $( ".work8").toggleClass("show");
 	});
 	$( "#photography" ).hover(function() {
 	  $( ".work1,.work2,.work3,.work4,.work5,.work6,.work7,.work8").toggleClass("fade");
+	  $( ".work9").toggleClass("show");
 	});
 	$( "#visual" ).hover(function() {
 	  $( ".work1,.work2,.work3,.work5,.work6,.work7,.work8,.work9").toggleClass("fade");
+	  $( ".work4").toggleClass("show");
 	});
 
 	var $document = $(document),
@@ -141,3 +155,14 @@ $document.scroll(function() {
      $("nav").removeClass("navScroll");
   }
 });
+
+function toggleNav() {
+    $( "#menu").toggleClass("opennav");
+    $("#fullpage").toggleClass("moveleft");
+   $(".homepage").toggleClass("scrollLimit");
+    $(".hamburger").toggleClass("is-active");
+}
+// function closeNav() {
+//     document.getElementByClass("menu").style.width = "0";
+//     document.getElementByClass("main").style.marginLeft = "0";
+// }

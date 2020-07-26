@@ -58,8 +58,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+@font-face {
+  font-family: 'europa';
+  src: url("../font/Europa-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'europa';
+  src: url("../font/Europa-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
 html {
-  background-color: #f4f4f4;
+  /*background-color: #f4f4f4;*/
   height: 100%;
 }
 @media (min-width: 0px) and (max-width: 999px) {
@@ -241,7 +253,7 @@ nav .logosvg {
 nav .hamburger {
   float: right;
   margin-top: 50px;
-  margin-right: 100px;
+  margin-right: 40px;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   z-index: 70;
@@ -284,77 +296,104 @@ nav .hamburger {
   }
 }
 
-div.menu {
-  height: 800px;
-  width: 400px;
-  float: right;
+#fullpage {
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.menu {
+  height: 100%;
+  width: 0px;
+  background-color: #100F0F;
   position: fixed;
+  overflow-x: 0;
+  float: right;
   top: 0;
   right: 0;
+  overflow: hidden;
   z-index: 50;
-  background: white;
-  display: none;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 90%);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 90%);
+  box-shadow: inset -65px 0px 98px -27px #000000;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  /*display: none;*/
+  /*-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 90%);*/
+  /*clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 90%);*/
 }
-@media (min-width: 500px) and (max-width: 999px) {
-  div.menu {
-    width: 60%;
-    height: 100%;
-  }
-}
-@media (min-width: 0) and (max-width: 499px) {
-  div.menu {
-    width: 100%;
-    height: 100%;
-  }
-}
-div.menu ul {
+.menu ul {
   margin-top: 100px;
-  font-family: 'Nunito', sans-serif;
-  font-size: 20px;
-  margin-left: 140px;
+  font-family: 'europa', sans-serif;
+  font-size: 35px;
+  margin-left: 40px;
 }
 @media (min-width: 0) and (max-width: 499px) {
-  div.menu ul {
-    font-size: 16px;
+  .menu ul {
+    font-size: 30px;
   }
 }
-div.menu ul .category {
-  position: relative;
-  font-size: 24px;
-  left: -15px;
-  padding: 10px;
-  cursor: pointer;
-  color: #727272;
-}
-@media (min-width: 0) and (max-width: 499px) {
-  div.menu ul .category {
-    padding: 5px;
-  }
-}
-div.menu ul li {
+.menu ul li {
   transition: all 0.2s;
   -webkit-transition: all 0.2s;
-  color: #9E9E9E;
-  padding: 5px;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 0px;
+  /*font-style: italic;*/
 }
 @media (min-width: 0) and (max-width: 499px) {
-  div.menu ul li {
+  .menu ul li {
     padding: 2px;
   }
 }
-div.menu ul li:hover {
-  color: #5B5B5B;
+.menu ul li:hover {
+  /*color:#333;*/
+  /*text-decoration: underline;*/
+  box-shadow: inset 0 -50px 0 0 #F9CE21;
+}
+.menu ul li.category {
+  position: relative;
+  padding: 30px 0 5px 0;
+  font-weight: normal;
+  color: #C5C5C5;
+  font-size: 22px;
+  box-shadow: none;
+}
+.menu ul li.category:hover {
+  text-decoration: none;
+  cursor: default;
+  box-shadow: none;
+  color: white;
+}
+
+.scrollLimit {
+  overflow: hidden;
+}
+
+.opennav {
+  width: 400px;
+}
+@media (min-width: 0) and (max-width: 999px) {
+  .opennav {
+    width: 100%;
+  }
+}
+
+.moveleft {
+  margin-right: 400px;
+}
+@media (min-width: 0) and (max-width: 999px) {
+  .moveleft {
+    margin-right: 100%;
+    overflow: hidden;
+    height: 100%;
+  }
 }
 
 div.works {
   width: 1000px;
   height: 500px;
   margin: 100px auto;
-  overflow: hidden;
+  /*overflow:hidden;*/
   /*filter: drop-shadow(0px 0px 5px #b5b5b5);*/
-  filter: drop-shadow(4px 4px 5px #b5b5b5);
+  /*filter: drop-shadow(4px 4px 5px #b5b5b5);*/
 }
 @media (min-width: 0px) and (max-width: 999px) {
   div.works {
@@ -383,8 +422,9 @@ div.works div {
   }
 }
 div.works div:hover {
-  opacity: 0.6;
-  filter: blur(3px);
+  opacity: 0.4;
+  transform: translate(0, -10px);
+  /*filter: blur(3px);*/
   /*filter: saturate(120%);*/
   /*filter: drop-shadow(0px 0px 5px #b5b5b5);*/
   /*filter:drop-shadow(5px 10px #888888);*/
@@ -750,6 +790,10 @@ div.works .work9 {
 
 .fade {
   opacity: 0.2 !important;
+}
+
+.show {
+  transform: translate(0, -10px);
 }
 
 .p-overview {
@@ -1187,7 +1231,7 @@ footer p {
   position: relative;
   /*border: 1px solid black;*/
   /*filter: drop-shadow(0px 0px 5px #b5b5b5);*/
-  filter: drop-shadow(4px 4px 5px #b5b5b5);
+  /*filter: drop-shadow(4px 4px 5px #b5b5b5);*/
 }
 @media (min-width: 0px) and (max-width: 999px) {
   .about .aboutContent {
