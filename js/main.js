@@ -76,7 +76,7 @@ $(document).ready(function() {
 $(document).ready(function() {
 	// var load_screen = document.getElementById("load_screen");
 	// document.body.removeChild(load_screen);
-	$('.preload').delay(100).fadeOut('slow')
+	$('.preload').delay(150).fadeOut('slow')
 });
 
 //    $( ".hamburger" ).click(function() {
@@ -157,9 +157,8 @@ $document.scroll(function() {
 });
 
 function toggleNav() {
-    $( "#menu").toggleClass("opennav");
-    $("#fullpage").toggleClass("moveleft");
-   $(".homepage").toggleClass("scrollLimit");
+    $(".menu").toggleClass("opennav");
+    $(".content").toggleClass("moveleft");
     $(".hamburger").toggleClass("is-active");
 }
 // function closeNav() {

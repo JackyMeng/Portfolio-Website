@@ -7,6 +7,9 @@
 @import "compass";
 @import "breakpoint";
 
+$low-height: (max-height 700px)(orientation portrait);
+$pclow-height: max-height 860px;
+
 @font-face {
   font-family: 'europa';
   src: url('../font/Europa-Regular.woff') format("woff");
@@ -19,6 +22,7 @@
   font-weight: bold;
   font-style: normal;
 }
+
 html{
 	/*background-color: #f4f4f4;*/
 	height: 100%;
@@ -47,7 +51,7 @@ div.about{
 	}
 }
 h1{
-	font-family: 'Nunito', sans-serif;
+	font-family: 'europa', sans-serif;
 	font-size:30px;
 	font-weight: 600;
 	text-decoration: none;
@@ -62,7 +66,7 @@ h1{
 	}
 }
 h2{
-	font-family: 'Nunito', sans-serif;
+	font-family: 'europa', sans-serif;
 	font-size:24px;
 	font-weight: 300;
 	color: white;
@@ -74,8 +78,9 @@ p.content{
 	max-width:1000px ;
 	width: 80%;
 	line-height: 1.6;
-	font-family: 'Nunito', sans-serif;
+	font-family: 'europa', sans-serif;
 	font-size:26px;
+	font-weight: normal;
 	margin: 50px auto;
 	color: #919191;
 	text-align: center;
@@ -145,7 +150,7 @@ nav{
 		}
 	@include breakpoint(0px 599px){
 		height: 80px;
-		background-color: rgba(255,255,255,0.95);
+		background-color: rgba(255,255,255,1);
 		}	
 		.logosvg{
 		height: 80px;
@@ -164,7 +169,7 @@ nav{
 			}
 			@include breakpoint(0px 599px){
 				height: 60px;
-				margin-left: 30px;
+				margin-left: 20px;
 				transform: translateX(0%);
 				margin-top: 10px;
 			}
@@ -182,8 +187,8 @@ nav{
 				margin-right: 40px;
 			}
 			@include breakpoint(0px 599px){
-				margin-top: 15px;
-				margin-right: 30px;
+				margin-top: 10px;
+				margin-right: 20px;
 			}
 		}
 }
@@ -209,7 +214,7 @@ nav{
 
 }
 
-#fullpage{
+.content{
 	transition: all 0.5s;
     -webkit-transition: all 0.5s;
 }
@@ -219,7 +224,6 @@ nav{
 	width:0px;
 	background-color:#100F0F;
 	position: fixed;
-	overflow-x:0;
 	float: right;
 	top:0;
 	right:0;
@@ -231,17 +235,20 @@ nav{
     /*display: none;*/
     /*-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 90%);*/
 	/*clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 90%);*/
-	@include breakpoint(0 999px){
-	}
 	ul{
 		margin-top: 100px;
 		font-family: 'europa', sans-serif;
 		font-size:35px;
 		margin-left: 40px;
-		@include breakpoint(0 499px){
-			font-size:30px;
+		@include breakpoint(0 599px){
+			font-size:26px;
 		}
-
+		@include breakpoint($low-height){
+			font-size: 22px;
+		}
+		@include breakpoint($pclow-height){
+			font-size: 22px;
+		}
 		li{
 			transition: all 0.2s;
     		-webkit-transition: all 0.2s;
@@ -249,7 +256,7 @@ nav{
 			font-weight: bold;
 			padding:5px 0px;
 			/*font-style: italic;*/
-			@include breakpoint(0 499px){
+			@include breakpoint(0 599px){
 			padding: 2px;
 			}
 				&:hover{
@@ -270,13 +277,22 @@ nav{
 						box-shadow: none;
 						color: white;
 					}
+					@include breakpoint(0 499px){
+						font-size:18px;
+					}
+					@include breakpoint($low-height){
+						font-size: 16px;
+					}
+					@include breakpoint($pclow-height){
+						padding: 10px 0 3px 0;
+						font-size: 18px;
+
+					}
 			}
 		}
 	}
 }
-.scrollLimit{
-	overflow: hidden;
-}
+
 .opennav{
 	width: 400px;
 	@include breakpoint(0 999px){
@@ -304,7 +320,7 @@ div.works{
       	height:1950px;
       	margin: 0px auto 0px auto;
     }
-    @include breakpoint(0px 499px){
+    @include breakpoint(0px 599px){
       	height: 1050px;
     }
 
@@ -680,6 +696,7 @@ div.works{
       	background-size: cover;
       	clip-path: none;
       	-webkit-clip-path:none;
+      	display: block;
 	  	/*-webkit-clip-path: polygon(0% 0%, 100% 0%,100% 75%, 0% 100%);*/
 	 	/*clip-path: polygon(0% 0%, 100% 0%,100% 75%, 0% 100%);*/
 	 	background-position: center center;
@@ -926,18 +943,21 @@ div.p-name{
     top: -434px;
     left: 331px;
 	@include breakpoint(0px 999px){
-	  		-webkit-clip-path: polygon(100% 0%,0% 75%, 100% 75%);
-	 		clip-path: polygon(100% 0%,0% 75%, 100% 75%);
+	  		/*-webkit-clip-path: polygon(100% 0%,0% 75%, 100% 75%);*/
+	 		/*clip-path: polygon(100% 0%,0% 75%, 100% 75%);*/
+	 		clip-path: none;
+      		display: block;
+	 		-webkit-clip-path:none;
 	 		width: 100%;
-	 		height: 200px;
-	 		top:-150px;
+	 		height: 100px;
+	 		top:-100px;
 	 		left: 0;
 
 }
     h1{
     padding-top: 125px;
     padding-left: 280px;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'europa', sans-serif;
 	font-size:30px;
 	font-weight: 600;
 	text-decoration: none;
@@ -945,20 +965,23 @@ div.p-name{
 	margin: 0 0;
 	text-align: left;
 	@include breakpoint(0px 999px){
-		padding-top: 75px;
-		padding-left:58%;
+		padding-top: 20px;
+		padding-left:0px;
+		text-align: center;
 	}
 	@include breakpoint(0px 500px){
-		font-size: 24px
+		font-size: 28px
 	}
     }
     h2{
     	padding-left: 280px;
+    	color: rgba(255,255,255,0.8);
     	@include breakpoint(0px 999px){
-		padding-left:58%;
+		text-align: center;
+		padding-left: 0px;
 		}
 		@include breakpoint(0px 500px){
-		font-size: 20px
+		font-size: 20px;
 	}
     }
 }
@@ -968,18 +991,23 @@ div.p-sm{
 		padding-left: 240px;
 		font-size: 24px;
 		@include breakpoint(0px 999px){
-			padding-top: 75px;
-			padding-left:58%;
+			/*padding-left:58%;*/
+			text-align: center;
+			font-size: 28px;
+			padding-top: 20px;
+			padding-left: 0px;
+
 		}
 		@include breakpoint(0px 500px){
-			font-size: 20px;
+			font-size: 28px;
 		}
 	}
 	h2{
 		padding-left: 240px;
 		font-size: 20px;
 		@include breakpoint(0px 999px){
-	padding-left:58%;
+		padding-left:0px;
+		text-align: center;
 		}
 		@include breakpoint(0px 500px){
 			font-size: 18px;

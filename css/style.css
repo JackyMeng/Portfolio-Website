@@ -107,7 +107,7 @@ div.about {
 }
 
 h1 {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'europa', sans-serif;
   font-size: 30px;
   font-weight: 600;
   text-decoration: none;
@@ -125,7 +125,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'europa', sans-serif;
   font-size: 24px;
   font-weight: 300;
   color: white;
@@ -140,8 +140,9 @@ p.content {
   max-width: 1000px;
   width: 80%;
   line-height: 1.6;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'europa', sans-serif;
   font-size: 26px;
+  font-weight: normal;
   margin: 50px auto;
   color: #919191;
   text-align: center;
@@ -221,7 +222,7 @@ nav {
 @media (min-width: 0px) and (max-width: 599px) {
   nav {
     height: 80px;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: white;
   }
 }
 nav .logosvg {
@@ -245,7 +246,7 @@ nav .logosvg {
 @media (min-width: 0px) and (max-width: 599px) {
   nav .logosvg {
     height: 60px;
-    margin-left: 30px;
+    margin-left: 20px;
     transform: translateX(0%);
     margin-top: 10px;
   }
@@ -266,8 +267,8 @@ nav .hamburger {
 }
 @media (min-width: 0px) and (max-width: 599px) {
   nav .hamburger {
-    margin-top: 15px;
-    margin-right: 30px;
+    margin-top: 10px;
+    margin-right: 20px;
   }
 }
 
@@ -296,7 +297,7 @@ nav .hamburger {
   }
 }
 
-#fullpage {
+.content {
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
 }
@@ -306,7 +307,6 @@ nav .hamburger {
   width: 0px;
   background-color: #100F0F;
   position: fixed;
-  overflow-x: 0;
   float: right;
   top: 0;
   right: 0;
@@ -325,9 +325,19 @@ nav .hamburger {
   font-size: 35px;
   margin-left: 40px;
 }
-@media (min-width: 0) and (max-width: 499px) {
+@media (min-width: 0) and (max-width: 599px) {
   .menu ul {
-    font-size: 30px;
+    font-size: 26px;
+  }
+}
+@media (max-height: 700px) and (orientation: portrait) {
+  .menu ul {
+    font-size: 22px;
+  }
+}
+@media (max-height: 860px) {
+  .menu ul {
+    font-size: 22px;
   }
 }
 .menu ul li {
@@ -338,7 +348,7 @@ nav .hamburger {
   padding: 5px 0px;
   /*font-style: italic;*/
 }
-@media (min-width: 0) and (max-width: 499px) {
+@media (min-width: 0) and (max-width: 599px) {
   .menu ul li {
     padding: 2px;
   }
@@ -362,9 +372,21 @@ nav .hamburger {
   box-shadow: none;
   color: white;
 }
-
-.scrollLimit {
-  overflow: hidden;
+@media (min-width: 0) and (max-width: 499px) {
+  .menu ul li.category {
+    font-size: 18px;
+  }
+}
+@media (max-height: 700px) and (orientation: portrait) {
+  .menu ul li.category {
+    font-size: 16px;
+  }
+}
+@media (max-height: 860px) {
+  .menu ul li.category {
+    padding: 10px 0 3px 0;
+    font-size: 18px;
+  }
 }
 
 .opennav {
@@ -402,7 +424,7 @@ div.works {
     margin: 0px auto 0px auto;
   }
 }
-@media (min-width: 0px) and (max-width: 499px) {
+@media (min-width: 0px) and (max-width: 599px) {
   div.works {
     height: 1050px;
   }
@@ -826,6 +848,7 @@ div.works .work9 {
     background-size: cover;
     clip-path: none;
     -webkit-clip-path: none;
+    display: block;
     /*-webkit-clip-path: polygon(0% 0%, 100% 0%,100% 75%, 0% 100%);*/
     /*clip-path: polygon(0% 0%, 100% 0%,100% 75%, 0% 100%);*/
     background-position: center center;
@@ -1032,18 +1055,21 @@ div.p-name {
 }
 @media (min-width: 0px) and (max-width: 999px) {
   div.p-name {
-    -webkit-clip-path: polygon(100% 0%, 0% 75%, 100% 75%);
-    clip-path: polygon(100% 0%, 0% 75%, 100% 75%);
+    /*-webkit-clip-path: polygon(100% 0%,0% 75%, 100% 75%);*/
+    /*clip-path: polygon(100% 0%,0% 75%, 100% 75%);*/
+    clip-path: none;
+    display: block;
+    -webkit-clip-path: none;
     width: 100%;
-    height: 200px;
-    top: -150px;
+    height: 100px;
+    top: -100px;
     left: 0;
   }
 }
 div.p-name h1 {
   padding-top: 125px;
   padding-left: 280px;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'europa', sans-serif;
   font-size: 30px;
   font-weight: 600;
   text-decoration: none;
@@ -1053,21 +1079,24 @@ div.p-name h1 {
 }
 @media (min-width: 0px) and (max-width: 999px) {
   div.p-name h1 {
-    padding-top: 75px;
-    padding-left: 58%;
+    padding-top: 20px;
+    padding-left: 0px;
+    text-align: center;
   }
 }
 @media (min-width: 0px) and (max-width: 500px) {
   div.p-name h1 {
-    font-size: 24px;
+    font-size: 28px;
   }
 }
 div.p-name h2 {
   padding-left: 280px;
+  color: rgba(255, 255, 255, 0.8);
 }
 @media (min-width: 0px) and (max-width: 999px) {
   div.p-name h2 {
-    padding-left: 58%;
+    text-align: center;
+    padding-left: 0px;
   }
 }
 @media (min-width: 0px) and (max-width: 500px) {
@@ -1083,13 +1112,16 @@ div.p-sm h1 {
 }
 @media (min-width: 0px) and (max-width: 999px) {
   div.p-sm h1 {
-    padding-top: 75px;
-    padding-left: 58%;
+    /*padding-left:58%;*/
+    text-align: center;
+    font-size: 28px;
+    padding-top: 20px;
+    padding-left: 0px;
   }
 }
 @media (min-width: 0px) and (max-width: 500px) {
   div.p-sm h1 {
-    font-size: 20px;
+    font-size: 28px;
   }
 }
 div.p-sm h2 {
@@ -1098,7 +1130,8 @@ div.p-sm h2 {
 }
 @media (min-width: 0px) and (max-width: 999px) {
   div.p-sm h2 {
-    padding-left: 58%;
+    padding-left: 0px;
+    text-align: center;
   }
 }
 @media (min-width: 0px) and (max-width: 500px) {
