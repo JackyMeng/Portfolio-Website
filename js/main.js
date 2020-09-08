@@ -47,7 +47,7 @@ $(document).ready(function() {
 		//Design
 		controlArrows: true,
 		verticalCentered: true,
-		sectionsColor : ['#fff', '#f7f7f7'],
+		sectionsColor : ['#F4F4F4', '#f4f4f4'],
 		paddingTop: '3em',
 		// paddingBottom: '10px',
 		fixedElements: '#header, .footer',
