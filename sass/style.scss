@@ -398,7 +398,7 @@ div.works{
       background-size: 100% auto;
       background-position: 0px 10px;
       @include breakpoint(0px 999px){
-	  		background: url(../img/pj2_m.png);
+	  		background: url(../img/pj1.jpg);
 			width: 100%;
 			height: 200px;
 	  		-webkit-clip-path: polygon(100% 0%, 0% 25%,0% 75%, 100% 100%);
@@ -1190,7 +1190,7 @@ footer{
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 100;
+	z-index: 1000;
 	.logoAnimation{
 		height: 100px;
 		width: 100px;
